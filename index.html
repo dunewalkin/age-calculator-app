@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+   <link rel="stylesheet" href="./reset.css">
+   <link rel="stylesheet" href="./styles.css">
+   <script src="./main.js" defer></script>
+  
+  <title>Age calculator app</title>
+
+</head>
+<body>
+<main class="container">
+      <form action="#" id="age-form">
+         <div class="input-wrapper">
+            <div class="input-item">
+               <label class="heading-s day-label">Day</label>
+               <input type="text" id="day" class="heading-m" 
+               placeholder="DD"
+               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+               maxlength="2">
+               <p class="day-error-message hidden"></p>
+            </div>
+               <div class="input-item">
+               <label class="heading-s month-label">Month</label>
+               <input type="text" id="month" class="heading-m" 
+               placeholder="MM"
+               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+               maxlength="2">
+               <p class="month-error-message hidden"></p>
+            </div>
+            <div class="input-item">
+               <label class="heading-s year-label">Year</label>
+               <input type="text" id="year" class="heading-m" 
+               placeholder="YYYY"
+               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+               maxlength="4">
+               <p class="year-error-message hidden"></p>
+            </div>
+         </div>
+         <div class="button-wrapper">
+            <button type="submit"></button>
+         </div>
+      </form>
+      <div class="output">
+         <h1><span id="YY">- -</span>years</h1>
+         <h1><span id="MM">- -</span>months</h1>
+         <h1><span id="DD">- -</span>days</h1>
+      </div>
+</main>
+
+</body>
+</html>

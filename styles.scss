@@ -1,0 +1,222 @@
+@font-face {
+   font-family: 'Poppins';
+   src: url(./assets/fonts/Poppins-Regular.ttf);
+   font-style: normal;
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: 'Poppins';
+   src: url(./assets/fonts/Poppins-Italic.ttf);
+   font-style: italic;
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: 'Poppins';
+   src: url(./assets/fonts/Poppins-Bold.ttf);
+   font-style: normal;
+   font-weight: 700;
+}
+
+@font-face {
+   font-family: 'Poppins';
+   src: url(./assets/fonts/Poppins-BoldItalic.ttf);
+   font-style: italic;
+   font-weight: 700;
+}
+
+@font-face {
+   font-family: 'Poppins';
+   src: url(./assets/fonts/Poppins-ExtraBold.ttf);
+   font-style: normal;
+   font-weight: 800;
+}
+
+@font-face {
+   font-family: 'Poppins';
+   src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+   font-style: italic;
+   font-weight: 800;
+}
+
+
+:root {
+   --clr-primary-1: 259, 100%, 65%;
+   --clr-primary-2: 0, 100%, 67%;
+
+   --clr-neutral-1: 0, 0%, 100%;
+   --clr-neutral-2: 0, 0%, 94%;
+   --clr-neutral-3: 0, 0%, 86%;
+   --clr-neutral-4: 0, 1%, 44%;
+   --clr-neutral-5: 0, 0%, 8%;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+   background-color: hsl(var(--clr-neutral-2));
+   color: hsl(var(--clr-neutral-4));
+
+   font-size: 0.875rem;
+   font-style: italic;
+   font-weight: 400;
+   line-height: normal;
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   @media (max-width: 800px) {
+      font-size: 0.75rem;
+   }
+}
+
+h1 {
+   font-style: italic;
+   font-weight: 800;
+   font-size: 6.5rem;
+   line-height: 110%;
+   letter-spacing: -0.13rem;
+   color: hsl(var(--clr-neutral-5));
+
+   @media (max-width: 800px) {
+      font-size: 3.5rem;
+      letter-spacing: -0.07rem;
+   }
+}
+
+h1 span {
+   margin-right: 0.75rem;
+   // letter-spacing: 1rem;
+   color: hsl(var(--clr-primary-1));
+}
+
+.heading-s {
+   font-style: normal;
+   font-weight: 700;
+   letter-spacing: 0.21875rem;
+   text-transform: uppercase;
+}
+
+.heading-m {
+   font-size: 2rem;
+   font-weight: 700;
+   letter-spacing: 0.02rem;
+
+   @media (max-width: 800px) {
+      font-size: 1.25rem;
+      letter-spacing: 0.0125rem;
+   }
+}
+
+.container {
+   padding: 3.5rem;
+   width: 52.5rem;
+   background-color: hsl(var(--clr-neutral-1));
+   border-radius: 1.5rem 1.5rem 12.5rem 1.5rem;
+   margin-inline: 1rem;
+
+   @media (max-width: 800px) {
+      padding: 3rem 1.5rem;
+      border-radius: 1.5rem 1.5rem 6.25rem 1.5rem;
+   }
+}
+
+.input-wrapper {
+   display: flex;
+   gap: 2rem;
+
+   @media (max-width: 800px) {
+      gap: 1rem;
+   }
+}
+
+.input-item {
+   max-width: 10rem;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+form label {
+   display: block;
+}
+
+form input {
+   width: 100%;
+   border-radius: 0.5rem;
+   border: 1px solid hsl(var(--clr-neutral-3));
+   padding: 0.75rem 1.5rem;
+   z-index: 100;
+
+   @media (max-width: 800px) {
+      padding: 0.5rem 1rem;
+   }  
+}
+
+form input:focus {
+      border: 1px solid hsl(var(--clr-primary-1));
+      outline: none;
+}
+
+input.error-border {
+   border: 1px solid hsl(var(--clr-primary-2)) !important;
+}
+
+.button-wrapper {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   position: relative;
+
+   @media (max-width: 800px) {
+      justify-content: center;
+      padding-block: 2rem;
+   }
+
+   &::after {
+   content: '';
+   position: absolute;
+   border-bottom: 1px solid hsl(var(--clr-neutral-3));
+   height: 100%;
+   width: 100%;
+   transform: translateY(-50%);
+   z-index: 1;
+   }
+}
+
+
+button {
+   display: block;
+   width: 6rem;
+   height: 6rem;
+   border-radius: 50%;
+   border: none;
+   background-color: hsl(var(--clr-primary-1));
+   background-image: url(./assets/images/icon-arrow.svg);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 2.75rem;
+   transition: all 0.2s;
+   cursor: pointer;
+   z-index: 10;
+
+   &:hover,
+   &:focus-visible {
+   background-color: hsl(var(--clr-neutral-5));
+   }
+
+   @media (max-width: 800px) {
+      width: 4rem;
+      height: 4rem;
+      background-size: 1.5rem;
+   }
+}
+
+.error {
+   color: hsl(var(--clr-primary-2));
+}
+
+.hidden {
+   display: none;
+}
