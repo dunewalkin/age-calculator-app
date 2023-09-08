@@ -53,6 +53,7 @@
 }
 
 body {
+   min-height: 100vh;
    font-family: 'Poppins', sans-serif;
    background-color: hsl(var(--clr-neutral-2));
    color: hsl(var(--clr-neutral-4));
